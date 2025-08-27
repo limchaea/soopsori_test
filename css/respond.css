@@ -1,0 +1,93 @@
+/* 반응형 css 작업 파일 */
+/* 1280px 이하 */
+@media screen and (max-width:1280px) {
+    .inner {
+        padding: 0 20px;
+    }
+
+    .main_menu {
+        gap: 3rem;
+    }
+
+    .gnb {
+        gap: 1.3rem;
+    }
+
+    section .title {
+        font-size: 3rem;
+    }
+
+    .only_tab_list li a {
+        padding: 0.9rem 0.5rem;
+    }
+}
+
+/* 1024px 이하 */
+@media screen and (max-width:1024px) {
+
+    /* 기본 글자 크기 14px */
+    html {
+        font-size: 14px;
+    }
+
+    /* 1. 제거하기 */
+    .main_menu,
+    .m_hide {
+        display: none !important;
+    }
+
+    /* 반응형을 만들 때는 pc버전에서 사용한 선택자를 그대로 사용해야 함. */
+
+    /* 2. 보이기 */
+    .ham_btn {
+        display: block;
+    }
+
+    /* 3. 100% 만들기 */
+
+
+
+    /* footer */
+    /* footer ,inner에게 준 flex를 취소,
+       footer_left와 footer_right를 다른 줄로 변경  */
+    footer .inner {
+        display: block;
+        padding: 3rem 20px;
+    }
+
+    .footer_right .sns_list {
+        justify-content: flex-start;
+        margin-top: 1.5rem;
+    }
+
+    .footer_right .footer_menu {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}
+
+
+/* 768px 이하 */
+@media screen and (max-width:768px) {
+
+    /* 기본 글자 크기 12px */
+    html {
+        font-size: 12px;
+    }
+
+    /* header .inner 줄간격 */
+    header .inner {
+        line-height: 56px;
+    }
+
+    /* logo 크기 */
+    .logo img {
+        width: 110px;
+    }
+
+    /* ham_btn 크기 */
+    .ham_btn img {
+        width: 24px;
+    }
+}

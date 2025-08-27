@@ -1,0 +1,194 @@
+.only_you_wrap .title {
+    margin-bottom: 0;
+}
+
+.title_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.title_box .only_tab_list {
+    display: Flex;
+    gap: 10px;
+}
+
+.only_tab_list li a {
+    display: block;
+    padding: 16px 24px;
+    border: 1px solid #092729;
+    border-radius: 30px;
+    font-size: 1.13rem;
+}
+
+.only_tab_list li a:hover {
+    background: #ddd;
+}
+
+.only_tab_list li.active a {
+    background: #092729;
+    ;
+    color: #fff;
+    font-weight: 600;
+}
+
+.only_slider_list {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.only_slider_list>div {
+    position: relative;
+    /* border: 1px solid red; */
+    padding: 2% 0;
+    border-radius: 40px 40px 0 40px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.only_slider_list>div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.only_slider_list>div .hover_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.only_slider_list>div .text_box {
+    position: absolute;
+    bottom: 50px;
+    /* left:50%;
+    transform:translateX(-50%); */
+    font-size: 1.13rem;
+    /* background-color: rgba(0, 255, 255, 0.1); */
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+}
+
+.only_slider_list>div .radius {
+    width: 75px;
+    height: 75px;
+    background: red;
+    background: #fff;
+    border-radius: 40px 0 0 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.only_slider_list>div .radius::before {
+    content: "";
+    display: block;
+    background: greenyellow;
+    background: transparent;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    left: -80px;
+    bottom: 0;
+    box-shadow: 40px 40px 0 blueviolet;
+    box-shadow: 40px 40px 0 #fff;
+}
+
+.only_slider_list>div .radius::after {
+    content: "";
+    display: block;
+    background: darkcyan;
+    background: transparent;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: -80px;
+    box-shadow: 40px 40px 0 darkolivegreen;
+    box-shadow: 40px 40px 0 #fff;
+}
+
+.only_slider_list>div:hover .hover_img {
+    opacity: 1;
+}
+
+.only_slider_list>div:hover .text_box {
+    color: #fff;
+}
+
+.only_slider_list>div::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #092729 url(../images/arrow_right.svg) no-repeat center center;
+    transform: rotate(45deg);
+    z-index: 1000;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.only_slider_list>div:hover::after {
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+}
+
+/* 자식들 옆으로 붙이기 */
+.sellection {
+    display: flex;
+    /* gap: 40px;
+    justify-content: center; */
+}
+
+/* 자식들의 너비를 동일하게 */
+/* .sellection>div {} */
+
+/* . sellection>div img 너비 100% */
+.sellection>div img{
+    width:100%;
+}
+
+/* .sle_right 자식을 좌우, 위아래 가운데로 보내기 */
+.sel_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:40px;
+    padding-left:95px;
+}
+
+.sel_right .text_box {
+    text-align: center;
+}
+
+.sel_right .text_box strong {
+    font-size:2rem;
+    margin:50px 0 20px;
+}
+
+.sel_right .text_box p {
+    font-size:1.13rem;
+    margin:20px 0;
+}
+
+.sel_right .text_box .more {
+    display: inline-block;
+    background:#092729;
+    border-radius: 30px;
+    color:#fff;
+    padding:12px 30px;
+
+}
